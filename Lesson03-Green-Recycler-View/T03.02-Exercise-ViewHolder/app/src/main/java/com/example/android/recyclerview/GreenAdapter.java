@@ -128,5 +128,16 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     // TODO (17) Within bind, set the text of listItemNumberView to the listIndex
     // TODO (18) Be careful to get the String representation of listIndex, as using setText with an int does something different
 
+    public class NumberViewHolder extends RecyclerView.ViewHolder{
+
+        private  TextView listItemNumberView;
+
+        public NumberViewHolder(View itemView) {
+            super(itemView);
+            listItemNumberView = (TextView) itemView.findViewById(R.id.rv_numbers);
+        }
+        public void bind(int listIndex){
+            listItemNumberView.setText(String.valueOf(listIndex));
+        }
     }
 }
